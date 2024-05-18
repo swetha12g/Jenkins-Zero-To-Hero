@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Assuming your Dockerfile is in the root directory
-                    docker build -t my-image:latest .
+                    docker build -t swetha .
                 }
             }
         }
