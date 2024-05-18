@@ -1,12 +1,13 @@
 pipeline {
-  agent any
-  stages {
-    stage('Build Image') {
-      steps {
-        script {
-            docker build -t myimage .
+    agent any
+    stages {
+        stage('Build Image') {
+            steps {
+                script {
+                    // Assuming your Dockerfile is in the root directory
+                    docker build -t my-image:1 .
+                }
+            }
         }
-      }
     }
-  }
 }
