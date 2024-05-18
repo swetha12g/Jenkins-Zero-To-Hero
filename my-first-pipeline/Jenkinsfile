@@ -1,17 +1,12 @@
-pipeline
-{
-    agent any
-    stages
-    {
-        stage('Build Image')
-        {
-            steps 
-            {
-                script {
-                    // Assuming your Dockerfile is in the root directory
-                    docker build -t swetha .
-                }
-            }
+pipeline {
+  agent any
+  stages {
+    stage('Build Image') {
+      steps {
+        script {
+            docker build -t my-image:latest .
         }
+      }
     }
+  }
 }
