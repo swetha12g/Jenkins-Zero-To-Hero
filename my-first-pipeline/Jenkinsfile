@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Assuming your Dockerfile is in the root directory
-                    docker build -t my-image:1 .
+                   sh 'docker build -t my-image:1 .'
                 }
             }
         }
