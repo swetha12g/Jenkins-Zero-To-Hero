@@ -1,12 +1,13 @@
 pipeline {
-  agent {
-    docker { image 'node:16-alpine' }
-  }
-  stages {
-    stage('Test') {
-      steps {
-        sh 'node --version'
-      }
+    agent any
+    stages {
+        stage('Build Image') {
+            steps {
+                script {
+                    // Assuming your Dockerfile is in the root directory
+                    docker build -t my-image:latest .
+                }
+            }
+        }
     }
-  }
 }
